@@ -3,7 +3,7 @@ services:
     name: edtech-crm-api
     runtime: node
     rootDir: backend
-    buildCommand: npm ci && npm run build
+    buildCommand: npm ci --include=dev && npm run build
     startCommand: node dist/server.js
     healthCheckPath: /api/health
     envVars:
