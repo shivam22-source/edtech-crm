@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: edtech-crm-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci && npm run build
+    startCommand: node dist/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: JWT_EXPIRES_IN
+        value: 2h
+      - key: DB_POOL_MAX
+        value: "10"
+      - key: BCRYPT_COST
+        value: "12"
