@@ -120,7 +120,16 @@ Render free services sleep when idle, so the first request after a pause can be 
 
 ## Live links and demo login
 
-Not deployed yet. Add the Vercel URL, the Render URL and the demo admin login here after deployment, and state that it is a demo account.
+- Frontend (Vercel): https://frontend-gray-six-91.vercel.app
+- API (Render): https://edtech-crm-k92p.onrender.com (health check: `/api/health`)
+- Database: Supabase PostgreSQL
+
+The API runs on a free Render instance that sleeps when idle. The first request after a pause can take up to a minute.
+
+Demo admin account, created for this assessment only:
+
+- Email: `admin@example.com`
+- Password: `Shivam847424`
 
 ## Known limits
 
